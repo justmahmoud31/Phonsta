@@ -1,0 +1,9 @@
+.main-grid {
+    color: #333;
+}
+#border-generator img{
+    border-radius:49% 51% 53% 47% / 100% 0% 100% 0%  ;
+}
+.main-grid {
+    background-color: #333;
+}
