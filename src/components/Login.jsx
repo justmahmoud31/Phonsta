@@ -1,33 +1,29 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Css/login.css";
-import axios from "axios";
 import { useState } from "react";
 import swal from "sweetalert";
 
 export default function Login() {
-  const [account, setaccount] = useState();
+
   const [email, setemail] = useState();
   const [password, setpassword] = useState();
+  let Navigate = useNavigate();
   const formsubmit = (e) => {
     e.preventDefault();
-    axios.get("http://localhost:3000/accounts").then((data) => {
-      setaccount(data.data);
-    });
-
-    for (let i = 0; i < account.length; i++) {
-      if (account[i].password === password) {
+      if (email.includes('@gmail.com')) {
         swal({
           title: "Done",
           icon: "success",
         });
+        Navigate("/");
+        let ath = document.getElementById("auth");
+        ath.style.display = "none";
       } else {
         swal({
           title: "failed",
           icon: "error",
         });
       }
-    }
-    console.log(account);
     console.log(email);
     console.log(password);
   };
