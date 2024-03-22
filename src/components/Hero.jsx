@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Css/Hero.css";
 export default function Hero() {
   return (
@@ -12,8 +13,8 @@ export default function Hero() {
                 <p className="text-center fw-bold">Here You can Find Every thing you wish for just click</p>
             </div>
             <div className="hero-buttons text-center">
-                <a className="btn btn-outline-dark mx-1 fw-bold">See More</a>
-                <a className="btn btn-dark mx-1 dw-bold">Know how to pay</a>
+                <Link to={'/explore'} className="btn btn-outline-dark mx-1 fw-bold">See More</Link>
+                <Link to={'./contact'} className="btn btn-dark mx-1 dw-bold">Know how to pay</Link>
             </div>
            </div>
         </div>

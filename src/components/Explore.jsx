@@ -63,7 +63,7 @@ export default function Explore() {
                   <div className="card my-3" key={index}>
                     <img
                       src={product.thumbnail}
-                      className=" h-100 w-100"
+                      className="h-100 w-100"
                       alt={product.brand}
                     />
                     <div className="card-body">
@@ -88,9 +88,9 @@ export default function Explore() {
                         >
                           More Details
                         </Link>
-                        <a href="#" className="btn btn-outline-dark btn-sm">
+                        <Link to={`/cart/${product.id}`} className="btn btn-outline-dark btn-sm">
                           <FontAwesomeIcon icon={faCartShopping} />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
